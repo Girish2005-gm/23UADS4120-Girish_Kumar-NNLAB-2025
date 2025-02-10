@@ -15,13 +15,17 @@ class Perceptron:
         weighted_sum = np.dot(X, self.weights[1:]) + self.weights[0]
         return self.activation_fn(weighted_sum)
 
-    def train(self, X_train, y_train):
-        for _ in range(self.max_epochs):
-            for X, y in zip(X_train, y_train):
-                y_pred = self.predict(X)
-                update = self.lr * (y - y_pred)
-                self.weights[1:] += update * X
-                self.weights[0] += update
+    def train(self, X_train, y_train):  # Correctly indented inside the class
+        for _ in range(self.max_epochs):  # Loop through epochs
+            for i in range(len(X_train)):  # Iterate using index
+                X = X_train[i]  # Get the input example
+                y = y_train[i]  # Get the expected output
+                
+                y_pred = self.predict(X)  # Get perceptron prediction
+                update = self.lr * (y - y_pred)  # Compute update value
+                
+                self.weights[1:] += update * X  # Update weights
+                self.weights[0] += update  # Update bias
 
 # NAND and XOR Truth Tables
 nand_X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
