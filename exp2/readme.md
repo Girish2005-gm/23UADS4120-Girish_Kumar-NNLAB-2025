@@ -45,10 +45,10 @@ def train_perceptron(X, y, name):
 
 fun_X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 
-fun1_y = np.array([0, 0, 0, 1])  # NAND
-fun2_y = np.array([0, 0, 1, 0])  # Custom function
-fun3_y = np.array([0, 1, 0, 0])  # Custom function
-fun4_y = np.array([1, 0, 0, 0])  # Custom function
+fun1_y = np.array([0, 0, 0, 1])  
+fun2_y = np.array([0, 0, 1, 0])  
+fun3_y = np.array([0, 1, 0, 0])  
+fun4_y = np.array([1, 0, 0, 0]) 
 
 fun1_predictions, _ = train_perceptron(fun_X, fun1_y, "Fun1")
 fun2_predictions, _ = train_perceptron(fun_X, fun2_y, "Fun2")
