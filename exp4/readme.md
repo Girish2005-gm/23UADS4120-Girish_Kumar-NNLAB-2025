@@ -58,6 +58,7 @@ Results are printed at the end summarizing:
 ## **My Comments**
 - **ReLU performed best** with **higher hidden layer sizes**.
 - **Sigmoid had slower convergence** and lower accuracy.
+- **Tanh performed better than Sigmoid** but **worse than ReLU**.
 - Execution time **varied based on activation function & hidden layer size**.
 
 
