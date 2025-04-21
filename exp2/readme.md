@@ -80,3 +80,7 @@ final_predictions, actual_y = train_perceptron(final_X, final_y, "Final Perceptr
 - Fun4 Accuracy: **100.00%** | Predictions: `[1 0 0 0]`
 - Final Perceptron Accuracy: **100.00%** | Predictions: `[0 1 1 0]`
 
+#### My Comment
+- The step activation function is not ideal for backpropagation since it lacks smooth gradients.
+- This MLP can learn XOR, but convergence is slower and less stable than using sigmoid or ReLU.
+- The weight update could be improved with momentum or adaptive learning rates
